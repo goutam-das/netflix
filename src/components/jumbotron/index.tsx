@@ -1,5 +1,5 @@
 import React, { FC, ReactNode } from 'react';
-import { Inner, Container, Pane, Title, SubTitle, Image } from './styles/jumbotron';
+import { Inner, Container, Item, Pane, Title, SubTitle, Image } from './styles/jumbotron';
 
 interface ContainerProps {
     children: ReactNode;
@@ -37,7 +37,9 @@ interface TCompound {
 
 const Jumbotron: FC<Props> & TCompound = ({ children, directtion = "row" }) => {
     return (
-        <Inner direction={directtion}>{children}</Inner>
+        <Item>
+            <Inner direction={directtion}>{children}</Inner>
+        </Item>
     )
 }
 
